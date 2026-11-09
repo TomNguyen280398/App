@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Dresden Mobility</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a73e8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<div id="topbar">
+  <button id="langBtn" class="pill" title="Language">DE</button>
+  <div id="searchbox">
+    <input id="stopSearch" type="text" data-i18n-ph="searchPh" autocomplete="off">
+    <button id="searchBtn" aria-label="search">&#128269;</button>
+  </div>
+  <button id="locateBtn" class="pill" aria-label="locate me">&#128205;</button>
+  <button id="installBtn" class="pill" hidden data-i18n="install">Install</button>
+</div>
+
+<div id="layerbar">
+  <label><input type="checkbox" id="lyrParking" checked><span class="dot" style="background:#34a853"></span><span data-i18n="parking">Parking</span></label>
+  <label><input type="checkbox" id="lyrTransport" checked><span class="dot" style="background:#1a73e8"></span><span data-i18n="transport">Transport</span></label>
+  <label><input type="checkbox" id="lyrConstruction" checked><span class="dot" style="background:#fbbc04"></span><span data-i18n="construction">Construction</span></label>
+</div>
+
+<div id="sheet">
+  <div id="sheetHandle"></div>
+  <div id="sheetContent"><p class="hint" data-i18n="hint">Search a stop or tap a marker</p></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
